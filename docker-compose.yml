@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  db:
+    image: "postgres:12"
+    ports:
+      - "54320:5432"
+    volumes: 
+      - ./pgdata:/var/lib/postgresql/data
+    environment: 
+      - POSTGRES_USER=alice
+      - POSTGRES_PASSWORD=wonderland
+      - POSTGRES_DB=myawesomedb
